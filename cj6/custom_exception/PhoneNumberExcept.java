@@ -3,14 +3,14 @@ package javabasics.cj6.custom_exception;
 
 import java.util.Scanner;
 
-class PhoneNumberFormatException extends Exception {
+class PhoneNumberFormatException extends RuntimeException {
     public PhoneNumberFormatException(String msg) {
         super(msg);
     }
 }
 
 public class PhoneNumberExcept {
-    public static void phoneNumberChecker(String phoneNumber) throws PhoneNumberFormatException {
+    public static void phoneNumberChecker(String phoneNumber)  {
         if (phoneNumber.length() != 10) throw new PhoneNumberFormatException("Invalid Phone Number..");
         for (char ch : phoneNumber.toCharArray()) {
             if (!(Character.isDigit(ch))) throw new PhoneNumberFormatException("Invalid Phone Number..");
