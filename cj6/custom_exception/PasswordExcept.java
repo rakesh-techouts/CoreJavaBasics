@@ -2,14 +2,14 @@ package javabasics.cj6.custom_exception;
 
 import java.util.Scanner;
 
-class PasswordFormatException extends Exception {
+class PasswordFormatException extends RuntimeException {
     public PasswordFormatException(String msg) {
         super(msg);
     }
 }
 
 public class PasswordExcept {
-    public static void passwordChecker(String password) throws PasswordFormatException {
+    public static void passwordChecker(String password) {
         if (password.length() < 8) throw new PasswordFormatException("Password must contains 8 or more Characters");
         int specialSymbol = 0;
         int upperCase = 0;
