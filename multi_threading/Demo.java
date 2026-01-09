@@ -1,10 +1,18 @@
 package javabasics.multi_threading;
 
-public class Demo {
-    public static int add(int a ,int b){
-        return a+b;
+public class Demo extends Thread{
+    @Override
+    public void run() {
+        System.out.println("This is a Thread");
     }
+
     public static void main(String[] args) {
-        add(10,20);
+        Thread t = new Demo();
+        t.stop();
+        System.out.println(t.getState());
+        System.out.println(t.isAlive());
+        System.out.println(t.getState());
+        t.start();
+        System.out.println(t.isAlive());
     }
 }

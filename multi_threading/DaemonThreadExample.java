@@ -9,10 +9,6 @@ public class DaemonThreadExample {
         daemonThread.setDaemon(true); // set before start()
         daemonThread.start();
 
-
-
-
-
         System.out.println("[Main] Main thread exiting...");
     }
 }
