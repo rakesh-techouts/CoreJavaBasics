@@ -2,12 +2,9 @@ package javabasics.multi_threading;
 
 class Table extends Thread {
     public void run() {
-        // synchronized (this){t1,t2
         for (int i = 1; i < 5; i++) {
             System.out.println("Iteration: " + i + " ThreadName" + Thread.currentThread().getName());
         }
-
-        // }
         synchronized (this){
             for(int i=1;i<10;i+=2) {
                 System.out.println("Iteration: "+i+" ThreadName"+Thread.currentThread().getName());
