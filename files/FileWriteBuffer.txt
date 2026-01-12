@@ -1,0 +1,1 @@
+This is demo file wile working with BufferedWriter with FileWriter
