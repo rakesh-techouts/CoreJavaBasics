@@ -1,0 +1,44 @@
+FunctionalInterfaces-->
+     -interface that have only one abstract method
+     -any number of static and default methods
+     -mostly helpful in Lambda expressions
+     -Annonmous functions
+     -FunctionalInterface annotation is used to specify it is Functional interface
+     -it is not mandatory but Recommended
+     Ex Runnable--run()
+        Consumer<T>--accept(T t)
+        Callable--- call()
+Lambda Expressions:
+    -it is to express the functions in short hand notation
+    -very useful for functional interfaces
+    -()->{ block of code}
+    -(paraA,paraB)->{block of code}
+Static methods:
+    -static methods are added in interfaces
+    -these can access by only with InterfaceName.staticMethodName
+    -these can not access by using reference of the interface
+    -as normal static methods can access by ClassName. and referenceName.
+    but in interfaces only with InterfaceName.staticMethodName
+Default methods:
+    -the methods in interfaces which we want to provide code for them are must default
+    -these can be used by the reference of the interface
+    -every implemented class has these default methods
+    -if two defaults methods have same signature with their name and type
+    if a class implements both interfaces then it must over ride that method
+    if we call any methodicalness then in that override method
+    A.super.methodName();
+    B.super.methodName();
+forEach():
+    it is a Inner loop which is vry helpfully in collections
+    it is a method in Iterable Interface and in Stream Interface for stream API
+    Every collection can use this method
+    forEach() take Consumer Interface Reference as a Parameter
+    Consumer is Functional Interface Consumer<T> it has a method accept(T t)
+static,instance method Reference:
+     method reference is helpful of using one method as reference to another
+     ClassName::staticMethodName---> for static methods
+     referenceName::nonStaticMethodName---->for non static methods
+     ClassName::new --> Constructor as reference
+
+
+
